@@ -34,7 +34,7 @@ Extensive testing with diverse scenarios ensures the system's accuracy and perfo
 # Quick Overview - Setup & Run
 
 > **Need to Download**:
-> <br> [CLion](https://www.jetbrains.com/clion/) or [Code::Blocks](https://www.codeblocks.org/downloads) or **C++ Compilers: MinGW / GCC** > <br> **Any Text Editor**
+> <br> [CLion](https://www.jetbrains.com/clion/) or [Code::Blocks](https://www.codeblocks.org/downloads) or **C++ Compilers: MinGW / GCC** <br> **Any Text Editor**
 
 #### Step - 1
 
