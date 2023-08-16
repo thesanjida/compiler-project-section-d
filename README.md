@@ -41,16 +41,16 @@ Extensive testing with diverse scenarios ensures the system's accuracy and perfo
 Download or Clone
 
 ```sh
-git clone https://github.com/livealvi/compiler-design-d--lab-task
+git clone https://github.com/thesanjida/compiler-project-section-d
 ```
 
 #### Step - 2
 
-Goto folder `compiler--lab-project` > `project`
+Goto folder `compiler-project-section-d`
 
 #### Step - 3
 
-open `project` - folder as a project via any `IDE` or `complier`
+open project via any `IDE` or `complier`
 
 #### Step - 4
 
