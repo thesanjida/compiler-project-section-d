@@ -4,13 +4,13 @@
 #include <vector>
 using namespace std;
 
-bool checkSyntax(const string &input) {
+bool checkError(const string &checkFile) {
     ofstream tempFile("temp.cpp");
     if (!tempFile) {
         cerr << "Error creating temporary file." << endl;
         return false;
     }
-    tempFile << "#include <iostream>\nint main() {\n" << input << "\nreturn 0;\n}\n";
+    tempFile << "#include <iostream>\nint main() {\n" << checkFile << "\nreturn 0;\n}\n";
     tempFile.close();
 
     string compileCommand = "g++ temp.cpp -o temp.exe";
@@ -21,25 +21,25 @@ bool checkSyntax(const string &input) {
 }
 
 int main() {
-    ifstream inputFile("/Users/alvi/Documents/complier_design_lab/compiler--lab-project/project/input.txt");
-    if (!inputFile) {
+    ifstream localFile("C:\\Users\\sanj\\Documents\\GitHub\\compiler-project-section-d\\input.txt");
+    if (!localFile) {
         cerr << "Error opening input file." << endl;
         return 1;
     }
 
     vector<string> inputLines;
     string line;
-    while (getline(inputFile, line)) {
+    while (getline(localFile, line)) {
         inputLines.push_back(line);
     }
 
-    inputFile.close();
-    cout << "Checking syntax..." << endl;
-    for (const string &input: inputLines) {
-        if (checkSyntax(input)) {
-            cout << "Syntax is correct: " << input << endl;
+    localFile.close();
+    cout << "Checking..." << endl;
+    for (const string &checkFile: inputLines) {
+        if (checkError(checkFile)) {
+            cout << "correct: " << checkFile << endl;
         } else {
-            cout << "Syntax is incorrect: " << input << endl;
+            cout << "incorrect: " << checkFile << endl;
         }
     }
     return 0;
